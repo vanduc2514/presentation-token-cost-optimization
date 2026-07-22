@@ -531,7 +531,7 @@ If you have any questions, feel free to reach out on <a href="https://github.com
 
 | GitHub | Website |
 |---|---|
-| ![GitHub QR](images/github-qr.svg) | ![Website QR](images/nvduc-qr.svg) |
+| ![GitHub QR](images/github-qr.png) | ![Website QR](images/nvduc-qr.png) |
 | ![GitHub icon](images/github-icon.svg) | ![Website icon](images/website-icon.svg) |
 
 <!-- SPEAKER NOTES
