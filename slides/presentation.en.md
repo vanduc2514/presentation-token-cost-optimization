@@ -260,6 +260,25 @@ output tokens significantly. Especially useful for automated pipelines.
 
 ------
 
+<!--slide-attr x=6400 y=-1800 scale=1.0 -->
+
+# Model Based Optimization
+
+| | Right Model | Right Task |
+|---|---|---|
+| **Approach** | Match capability to need | Route work by complexity |
+| **Methods** | Model selection, tier routing | Agent specialization |
+| **Impact** | No overpay for capability | Max efficiency per task |
+
+<!-- SPEAKER NOTES
+Two dimensions of model optimization. First: pick the cheapest model
+that can do the job — do not use Opus for a one-line lint fix. Second:
+route work to specialized agents so each task uses the optimal model.
+The next slide shows dedicated agents in practice.
+-->
+
+------
+
 <!--slide-attr x=6400 y=-2400 scale=1.0 -->
 
 # Custom Agents
@@ -300,7 +319,7 @@ resets. Design your workflow around these constraints to maximize cache hits.
 
 <!--slide-attr x=4000 y=-2400 scale=1.0 -->
 
-# What Kills the Cache?
+# Common Cache Missed Pattern
 
 <img src="./images/cache-miss-model.png" alt="Model switch" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
 
@@ -314,7 +333,7 @@ Changing the model mid-session invalidates the cache. The model identifier is pa
 
 <!--slide-attr x=3200 y=-2400 scale=1.0 -->
 
-# What Kills the Cache?
+# Common Cache Missed Pattern
 
 <img src="./images/cache-miss-mode-change.png" alt="Mode change" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
 
@@ -328,7 +347,7 @@ Switching between agent modes (e.g. from Ask to Agent) changes the system prompt
 
 <!--slide-attr x=2400 y=-2400 scale=1.0 -->
 
-# What Kills the Cache?
+# Common Cache Missed Pattern
 
 <img src="./images/cache-miss-tool-change.png" alt="Tool change" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
 
@@ -342,7 +361,7 @@ Different tools and their outputs are injected into the prompt prefix. When tool
 
 <!--slide-attr x=1600 y=-2400 scale=1.0 -->
 
-# What Kills the Cache?
+# Common Cache Missed Pattern
 
 <img src="./images/cache-expire.png" alt="Cache expire" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
 
