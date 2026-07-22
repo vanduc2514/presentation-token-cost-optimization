@@ -237,7 +237,7 @@ chạy tìm kiếm, đoán sai. AGENTS.md tốt loại bỏ chi phí khám phá
 - Nguyên tắc: **tính toán bên ngoài, chỉ hiển thị kết quả**
 - Công cụ: context-mode, RTK, structured I/O pipelines
 
-<div class="impact-box"><strong>Tác động:</strong> Giảm 90%+ token khi xử lý dữ liệu lớn — file log 700KB → tóm tắt 3KB</div>
+<div class="impact-box"><strong>Tác động:</strong> Giảm 90%+ token khi xử lý dữ liệu lớn - file log 700KB thành tóm tắt 3KB</div>
 
 <!-- SPEAKER NOTES
 Mẫu cốt lõi: thay vì đọc file lớn vào ngữ cảnh rồi phân tích,
@@ -259,7 +259,7 @@ nguồn lãng phí token lớn nhất.
 - **Token caps**: giới hạn độ dài phản hồi rõ ràng
 - Ít dài dòng = ít token đầu ra
 
-<div class="impact-box"><strong>Tác động:</strong> Cắt giảm 50%+ token đầu ra mà không mất thông tin — phản hồi ngắn gọn ở mọi tương tác</div>
+<div class="impact-box"><strong>Tác động:</strong> Cắt giảm 50%+ token đầu ra mà không mất thông tin - phản hồi ngắn gọn ở mọi tương tác</div>
 
 <!-- SPEAKER NOTES
 Model mặc định có xu hướng giải thích chi tiết, hữu ích. Một skill
@@ -280,7 +280,7 @@ token đầu ra. Đặc biệt hữu ích cho pipeline tự động.
 - **Kiểm tra**: linting, validation -> model nhỏ
 - Mỗi agent có system prompt và lựa chọn model riêng
 
-<div class="impact-box"><strong>Tác động:</strong> Chỉ trả tiền cho năng lực bạn cần — Haiku cho lint, Sonnet cho tính năng, Opus cho kiến trúc</div>
+<div class="impact-box"><strong>Tác động:</strong> Chỉ trả tiền cho năng lực bạn cần - Haiku cho lint, Sonnet cho tính năng, Opus cho kiến trúc</div>
 
 <!-- SPEAKER NOTES
 Đừng trả giá Opus cho việc Haiku làm tốt. Tách workflow:

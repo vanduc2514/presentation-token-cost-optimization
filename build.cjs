@@ -213,7 +213,7 @@ const customCss = `
       background: #f0fdf4;
       border: 1px solid #bbf7d0;
       border-radius: 10px;
-      font-size: clamp(0.75rem, 1.4vmin, 0.9rem);
+      font-size: clamp(0.95rem, 1.8vmin, 1.1rem);
       color: #166534;
       line-height: 1.4;
     }
@@ -301,7 +301,7 @@ const customCss = `
         white-space: pre;
         word-break: normal;
       }
-      .impact-box { font-size: clamp(0.7rem, 1.3vmin, 0.9rem); padding: 0.5rem 0.8rem; }
+      .impact-box { font-size: clamp(0.9rem, 1.7vmin, 1.05rem); padding: 0.5rem 0.8rem; }
     }
 
     /* ── TITLE SLIDE ───────────────────────────────────────────────────── */
