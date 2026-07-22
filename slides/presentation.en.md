@@ -191,13 +191,19 @@ charge a cache write fee (~25% above input). Source: GitHub Copilot Models and P
 
 <!--slide-attr x=6400 y=2400 scale=1.0 -->
 
-# Token Based Optimization
+# Token Cost Optimization
 
-| | Reduce Volume | Reduce Rate |
+| | Token Based | Model Based |
 |---|---|---|
 | **Approach** | Fewer tokens in/out | Cheaper per-token price |
 | **Methods** | AGENTS.md, Skills, sandbox | Model selection, caching |
 | **Impact** | Fewer total tokens | Lower $/token |
+
+<!-- SPEAKER NOTES
+Two parallel strategies: reduce the volume of tokens flowing through the
+context window, or reduce the unit price of those tokens. Most cost savings
+come from a combination of both.
+-->
 
 
 ------

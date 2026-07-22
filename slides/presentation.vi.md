@@ -190,13 +190,19 @@ tính phí cache write (~25% cao hơn input). Nguồn: GitHub Copilot Models and
 
 <!--slide-attr x=6400 y=2400 scale=1.0 -->
 
-# Tối ưu Dựa Trên Token
+# Tối ưu Chi phí Token
 
-| | Giảm Số Lượng | Giảm Giá |
+| | Dựa trên Token | Dựa trên Model |
 |---|---|---|
 | **Cách tiếp cận** | Ít token vào/ra hơn | Rẻ hơn mỗi token |
 | **Phương pháp** | AGENTS.md, Skills, sandbox | Chọn model, caching |
 | **Tác động** | Giảm tổng token | Giảm $/token |
+
+<!-- SPEAKER NOTES
+Hai chiến lược song song: giảm khối lượng token qua cửa sổ ngữ cảnh,
+hoặc giảm đơn giá mỗi token. Hầu hết tiết kiệm chi phí đến từ sự kết hợp
+cả hai.
+-->
 
 
 ------
