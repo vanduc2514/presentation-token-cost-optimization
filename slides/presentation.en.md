@@ -217,7 +217,8 @@ come from a combination of both.
 - Project-level instructions reduce exploration
 - Model reads conventions once instead of re-discovering each turn
 - Define: architecture, file layout, coding style, build commands
-- Result: fewer tool calls, fewer wrong assumptions, fewer correction rounds
+
+<div class="impact-box"><strong>Result:</strong> Fewer tool calls, fewer wrong assumptions, fewer correction rounds</div>
 
 <!-- SPEAKER NOTES
 Without AGENTS.md, the model explores your codebase by reading files,

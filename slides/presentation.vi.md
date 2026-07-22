@@ -216,7 +216,8 @@ cả hai.
 - Hướng dẫn cấp dự án giảm khám phá
 - Model đọc quy ước một lần thay vì khám phá lại mỗi lượt
 - Định nghĩa: kiến trúc, cấu trúc file, phong cách code, lệnh build
-- Kết quả: ít tool call hơn, ít giả định sai hơn, ít vòng sửa lỗi hơn
+
+<div class="impact-box"><strong>Kết quả:</strong> Ít tool call hơn, ít giả định sai hơn, ít vòng sửa lỗi hơn</div>
 
 <!-- SPEAKER NOTES
 Không có AGENTS.md, model khám phá codebase bằng cách đọc file,
