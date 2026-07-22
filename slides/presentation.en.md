@@ -348,6 +348,21 @@ only needs pattern matching. Different capabilities, different models.
 
 ------
 
+<!--slide-attr x=5600 y=-2400 scale=1.0 -->
+
+# Agents Workflow
+
+<img src="./images/agents-workflow.png" alt="Agents workflow" class="zoomable-img" style="display: block; margin: 1.2rem auto 0; max-width: 95%; height: auto; border-radius: 12px;">
+
+<!-- SPEAKER NOTES
+Each task goes through a pipeline of specialized agents. The planning agent
+designs the architecture using a large reasoning model. The implementation
+agent writes the code with a medium model. The review agent validates with
+a small model. Each agent uses only the capability needed.
+-->
+
+------
+
 <!--slide-attr x=4800 y=-2400 scale=1.0 -->
 
 # Utilize Prompt Caching
@@ -440,6 +455,37 @@ Cache TTL varies by provider — 5 minutes default, up to 1 hour with paid optio
 Establish a baseline of your current token usage. Run the same representative
 workload before and after each optimization. Quantify the impact. Without
 measurement, you are guessing.
+-->
+
+------
+
+<!--slide-attr x=0 y=-2400 scale=1.0 -->
+
+# Dashboard Tracing & Context Control
+
+<table style="border: 0; background: transparent; margin-top: 0.2rem;">
+<tbody>
+<tr>
+<td style="border: 0; width: 50%; text-align: center; vertical-align: middle; padding: 0.2rem 0.4rem;">
+<img src="./images/trace-aspire-dashboard.png" alt="Trace Aspire Dashboard" class="zoomable-img" style="display: block; margin: 0 auto; max-width: 100%; height: auto; border-radius: 12px;">
+</td>
+<td style="border: 0; width: 50%; text-align: center; vertical-align: middle; padding: 0.2rem 0.4rem;">
+<img src="./images/chat-context-window-control.png" alt="Chat Context Window Control" class="zoomable-img" style="display: block; margin: 0 auto; max-width: 100%; height: auto; border-radius: 12px;">
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- SPEAKER NOTES
+Tracing and dashboards give you the visibility to know what is costing you
+money. VS Code's built-in debug panel shows per-session token counts. Export
+via OpenTelemetry to aggregate across all developers on your team.
+
+Context window management is equally important. Long sessions accumulate
+conversation history that pushes context size up. Prune old turns, start
+fresh sessions for new tasks, and be selective about file attachments.
+These two practices — measure and control — form the feedback loop for
+sustained optimization.
 -->
 
 ------

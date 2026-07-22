@@ -346,6 +346,21 @@ kiểm tra chỉ cần pattern matching. Khả năng khác nhau, model khác nha
 
 ------
 
+<!--slide-attr x=5600 y=-2400 scale=1.0 -->
+
+# Luồng Agent
+
+<img src="./images/agents-workflow.png" alt="Agents workflow" class="zoomable-img" style="display: block; margin: 1.2rem auto 0; max-width: 95%; height: auto; border-radius: 12px;">
+
+<!-- SPEAKER NOTES
+Mỗi tác vụ đi qua một pipeline các agent chuyên biệt. Agent lập kế hoạch
+thiết kế kiến trúc dùng model lớn. Agent triển khai viết code dùng model
+vừa. Agent kiểm tra xác thực dùng model nhỏ. Mỗi agent chỉ dùng năng lực
+cần thiết.
+-->
+
+------
+
 <!--slide-attr x=4800 y=-2400 scale=1.0 -->
 
 # Tận Dụng Prompt Caching
@@ -438,6 +453,37 @@ TTL cache tùy theo nhà cung cấp — mặc định ~5 phút, lên đến 1 gi
 Thiết lập baseline về mức sử dụng token hiện tại. Chạy cùng workload
 đại diện trước và sau mỗi lần tối ưu. Định lượng tác động. Không có
 đo lường, bạn chỉ đang đoán.
+-->
+
+------
+
+<!--slide-attr x=0 y=-2400 scale=1.0 -->
+
+# Dashboard Tracing & Kiểm Soát Ngữ Cảnh
+
+<table style="border: 0; background: transparent; margin-top: 0.2rem;">
+<tbody>
+<tr>
+<td style="border: 0; width: 50%; text-align: center; vertical-align: middle; padding: 0.2rem 0.4rem;">
+<img src="./images/trace-aspire-dashboard.png" alt="Trace Aspire Dashboard" class="zoomable-img" style="display: block; margin: 0 auto; max-width: 100%; height: auto; border-radius: 12px;">
+</td>
+<td style="border: 0; width: 50%; text-align: center; vertical-align: middle; padding: 0.2rem 0.4rem;">
+<img src="./images/chat-context-window-control.png" alt="Chat Context Window Control" class="zoomable-img" style="display: block; margin: 0 auto; max-width: 100%; height: auto; border-radius: 12px;">
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- SPEAKER NOTES
+Dashboard và tracing giúp bạn biết thứ gì đang tiêu tốn chi phí. Bảng
+Agent Debug trong VS Code hiển thị số token mỗi phiên. Export qua
+OpenTelemetry để tổng hợp từ tất cả developer trong nhóm.
+
+Quản lý cửa sổ ngữ cảnh cũng quan trọng không kém. Phiên dài tích lũy
+lịch sử hội thoại đẩy kích thước ngữ cảnh lên cao. Dọn lịch sử cũ, bắt
+đầu phiên mới cho tác vụ mới, và chỉ chọn lọc file đính kèm. Hai thực
+hành này — đo lường và kiểm soát — tạo thành vòng phản hồi cho tối ưu
+bền vững.
 -->
 
 ------
