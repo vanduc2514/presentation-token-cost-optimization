@@ -325,6 +325,20 @@ token đầu ra. Đặc biệt hữu ích cho pipeline tự động.
 
 ------
 
+<!--slide-attr x=6400 y=-1800 scale=1.0 -->
+
+# Caveman Skill
+
+<img src="./images/caveman.png" alt="Caveman skill" class="zoomable-img" style="display: block; margin: 0.8rem auto 0; max-width: 85%; height: auto; border-radius: 12px;">
+
+<!-- SPEAKER NOTES
+Caveman skill buộc model phản hồi ngắn gọn, tối thiểu. Thay vì giải thích
+dài dòng, nó chỉ đưa ra câu trả lời. Điều này giảm đáng kể số token đầu ra
+mỗi tương tác.
+-->
+
+------
+
 <!--slide-attr x=6400 y=-2400 scale=1.0 -->
 
 # Custom Agents

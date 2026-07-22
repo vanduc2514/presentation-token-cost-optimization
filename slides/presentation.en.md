@@ -327,6 +327,20 @@ output tokens significantly. Especially useful for automated pipelines.
 
 ------
 
+<!--slide-attr x=6400 y=-1800 scale=1.0 -->
+
+# Caveman Skill
+
+<img src="./images/caveman.png" alt="Caveman skill" class="zoomable-img" style="display: block; margin: 0.8rem auto 0; max-width: 85%; height: auto; border-radius: 12px;">
+
+<!-- SPEAKER NOTES
+The caveman skill forces the model to respond in terse, minimal fashion.
+Instead of lengthy explanations, it gives just the answer. This dramatically
+reduces output token count per interaction.
+-->
+
+------
+
 <!--slide-attr x=6400 y=-2400 scale=1.0 -->
 
 # Custom Agents
