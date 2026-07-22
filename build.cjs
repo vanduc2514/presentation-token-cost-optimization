@@ -317,6 +317,14 @@ const customCss = `
     #step-9 table { table-layout: fixed; }
     #step-9 th, #step-9 td { text-align: center; }
     #step-9 td:first-child { text-align: left; }
+    #step-9 .cache-free {
+      background: #dcfce7;
+      color: #166534;
+      font-weight: 600;
+      padding: 0.15rem 0.6rem;
+      border-radius: 6px;
+      display: inline-block;
+    }
     #step-11, #step-12, #step-13, #step-14, #step-15, #step-16 { --group-accent: #a855f7; }
     #step-17, #step-18 { --group-accent: #f59e0b; }
 

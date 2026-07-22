@@ -168,15 +168,13 @@ and to identify where cache is being invalidated unexpectedly.
 
 # Cache Pricing
 
-> AI Credits per 1M tokens. Output from Cache = 80% off. Some models are free.
-
-| Model | Non-Cache | Cache |
+| Model | Non-Cache (In/Out) | Cache (In/Out) |
 |---|---|---|
-| GPT-5.4 mini | 75 / 450 | 7 / 0 |
-| MAI Code 1 Flash | 75 / 450 | 7 / 0 |
-| GPT-5.4 | 250 / 1500 | 25 / 0 |
+| GPT-5.4 mini | 75 / 450 | <span class="cache-free">7 / 0</span> |
+| MAI Code 1 Flash | 75 / 450 | <span class="cache-free">7 / 0</span> |
+| GPT-5.4 | 250 / 1500 | <span class="cache-free">25 / 0</span> |
 | Claude Sonnet 4.6 | 300 / 1500 | 30 / 375 |
-| GPT-5.5 | 500 / 3000 | 50 / 0 |
+| GPT-5.5 | 500 / 3000 | <span class="cache-free">50 / 0</span> |
 | Claude Opus 4.6 | 500 / 2500 | 50 / 625 |
 
 <!-- SPEAKER NOTES
