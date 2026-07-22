@@ -82,17 +82,25 @@ Token Vào trước.
 
 <!--slide-attr x=1600 y=1200 scale=1.0 -->
 
-# Model Price Optimization
+# Kiểm Soát Giá Mô Hình
 
-| | Chi phí |
-|---|---|
-| **Kích Thước Model (non-cache)** | |
-| Nhỏ: Claude Haiku, GPT-5.4-mini, MAI | 1x |
-| Vừa: Claude Sonnet, GPT-5.4 | 3x |
-| Lớn: Claude Opus, GPT-5.5 | 5x |
-| **Giá Đầu Ra vs Đầu Vào** | |
-| Đầu vào | 1x |
-| Đầu ra | 5x |
+<table>
+<thead>
+<tr><th>Nhỏ</th><th>Vừa</th><th>Lớn</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="./images/GPT-5.4-mini.png" alt="GPT-5.4-mini" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+<td><img src="./images/GPT-5.4.png" alt="GPT-5.4" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+<td><img src="./images/GPT-5.5.png" alt="GPT-5.5" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+</tr>
+<tr>
+<td><img src="./images/MAI.png" alt="MAI" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+<td><img src="./images/Sonnet 4.6.png" alt="Sonnet 4.6" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+<td><img src="./images/Opus 4.6.png" alt="Opus 4.6" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+</tr>
+</tbody>
+</table>
 
 <!-- SPEAKER NOTES
 Hai yếu tố chi phối: chọn cấp model và khoảng cách giá đầu vào/đầu ra.

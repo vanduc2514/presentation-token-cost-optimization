@@ -82,17 +82,25 @@ Token In first.
 
 <!--slide-attr x=1600 y=1200 scale=1.0 -->
 
-# Model Price Optimization
+# Control Model Price
 
-| | Cost |
-|---|---|
-| **Model Size (non-cache)** | |
-| Small: Claude Haiku, GPT-5.4-mini, MAI | 1x |
-| Medium: Claude Sonnet, GPT-5.4 | 3x |
-| Large: Claude Opus, GPT-5.5 | 5x |
-| **Output vs Input Rate** | |
-| Input | 1x |
-| Output | 5x |
+<table>
+<thead>
+<tr><th>Small</th><th>Medium</th><th>Large</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><img src="./images/GPT-5.4-mini.png" alt="GPT-5.4-mini" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+<td><img src="./images/GPT-5.4.png" alt="GPT-5.4" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+<td><img src="./images/GPT-5.5.png" alt="GPT-5.5" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+</tr>
+<tr>
+<td><img src="./images/MAI.png" alt="MAI" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+<td><img src="./images/Sonnet 4.6.png" alt="Sonnet 4.6" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+<td><img src="./images/Opus 4.6.png" alt="Opus 4.6" class="zoomable-img" style="width: 70%; display: block; margin: 0 auto;"></td>
+</tr>
+</tbody>
+</table>
 
 <!-- SPEAKER NOTES
 Two dominant factors: model tier selection and the input/output rate gap.
