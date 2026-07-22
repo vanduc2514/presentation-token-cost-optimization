@@ -504,11 +504,30 @@ sustained optimization.
 
 ------
 
+<!--slide-attr x=0 y=3600 scale=1.0 -->
+
+# Key Takeaways
+
+| Strategy | Action |
+|---|---|
+| **Reduce Token Volume** | AGENTS.md, fresh sessions, sandbox, concise output |
+| **Reduce Token Rate** | Right model for the task, prompt caching, output constraints |
+| **Monitor &amp; Iterate** | Measure before optimizing, track cache hit rates, use Agent Debug |
+
+<!-- SPEAKER NOTES
+Three pillars of token cost optimization. First: reduce what enters the
+context window. Second: reduce the price per token by choosing the right
+model and leveraging caching. Third: establish a baseline before optimizing
+so you can measure the impact.
+-->
+
+------
+
 <!--slide-attr x=0 y=4800 rotate=-3 scale=1.1 -->
 
 # Thank You
 
-Questions?
+If you have any questions, feel free to reach out on <a href="https://github.com/vanduc2514" target="_blank" rel="noopener noreferrer" style="color: var(--group-accent); text-decoration: underline;">GitHub</a> or scan the QR below.
 
 | GitHub | Website |
 |---|---|

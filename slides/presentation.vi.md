@@ -502,11 +502,30 @@ bền vững.
 
 ------
 
+<!--slide-attr x=0 y=3600 scale=1.0 -->
+
+# Bài Học Chính
+
+| Chiến lược | Hành động |
+|---|---|
+| **Giảm Lượng Token** | AGENTS.md, phiên mới, sandbox, output ngắn gọn |
+| **Giảm Giá Token** | Đúng model cho tác vụ, prompt caching, ràng buộc output |
+| **Theo dõi &amp; Lặp lại** | Đo lường trước khi tối ưu, theo dõi cache hit, dùng Agent Debug |
+
+<!-- SPEAKER NOTES
+Ba trụ cột của tối ưu chi phí token. Đầu tiên: giảm lượng vào cửa sổ
+ngữ cảnh. Thứ hai: giảm giá mỗi token bằng cách chọn đúng model và tận
+dụng caching. Thứ ba: thiết lập baseline trước khi tối ưu để đo lường
+tác động.
+-->
+
+------
+
 <!--slide-attr x=0 y=4800 rotate=-3 scale=1.1 -->
 
 # Xin Cảm Ơn
 
-Câu hỏi?
+Nếu có thắc mắc, hãy kết nối qua <a href="https://github.com/vanduc2514" target="_blank" rel="noopener noreferrer" style="color: var(--group-accent); text-decoration: underline;">GitHub</a> hoặc quét mã QR bên dưới.
 
 | GitHub | Website |
 |---|---|
