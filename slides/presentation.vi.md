@@ -276,9 +276,25 @@ nguồn lãng phí token lớn nhất.
 
 <!--slide-attr x=6400 y=-600 scale=1.0 -->
 
-# Sandbox Hoạt Động Thế Nào
+# Môi trường Sandbox
 
-<img src="./images/sandbox-mechanism.png" alt="Sandbox mechanism" class="zoomable-img" style="display: block; margin: 0.8rem auto 0; max-width: 90%; height: auto; border-radius: 12px;">
+<table style="border: 0; background: transparent; margin-top: 0.2rem;">
+<tbody>
+<tr>
+<td style="border: 0; width: 50%; text-align: center; vertical-align: middle; padding: 0.2rem 0.4rem;">
+<img src="./images/sandbox-mechanism.png" alt="Sandbox mechanism" class="zoomable-img" style="display: block; margin: 0 auto; max-width: 100%; height: auto; border-radius: 12px;">
+<div style="text-align: center; font-size: clamp(0.8rem, 1.4vmin, 0.95rem); color: #52525b; margin-top: 0.3rem;">Cơ chế thực thi sandbox</div>
+</td>
+<td style="border: 0; width: 50%; text-align: center; vertical-align: middle; padding: 0.2rem 0.4rem;">
+<img src="./images/context-mode.png" alt="Context-mode" class="zoomable-img" style="display: block; margin: 0 auto; max-width: 100%; height: auto; border-radius: 12px;">
+<div style="text-align: center; font-size: clamp(0.8rem, 1.4vmin, 0.95rem); color: #52525b; margin-top: 0.3rem;">Context-mode: tự động đánh chỉ mục và tìm kiếm</div>
+<div style="margin-top: 0.8rem;"></div>
+<img src="./images/rtk.png" alt="RTK" class="zoomable-img" style="display: block; margin: 0 auto; max-width: 100%; height: auto; border-radius: 12px;">
+<div style="text-align: center; font-size: clamp(0.8rem, 1.4vmin, 0.95rem); color: #52525b; margin-top: 0.3rem;">RTK: truy xuất kiến thức thời gian thực</div>
+</td>
+</tr>
+</tbody>
+</table>
 
 <!-- SPEAKER NOTES
 Sơ đồ này cho thấy mẫu sandbox cốt lõi. Dữ liệu lớn ở bên ngoài cửa sổ
