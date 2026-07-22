@@ -228,6 +228,31 @@ that exploration cost by providing the answers upfront.
 
 ------
 
+<!--slide-attr x=6400 y=600 scale=1.0 -->
+
+# AGENTS.md
+
+<table style="border: 0; background: transparent; margin-top: 0.5rem;">
+<tbody>
+<tr>
+<td style="border: 0; width: 50%; text-align: center; vertical-align: top; padding: 0.4rem 0.6rem;">
+<img src="./images/maze.jpg" alt="Project maze" style="display: block; margin: 0 auto; width: 100%; max-width: 320px; border-radius: 12px;">
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.5rem;">Maze and navigation map</div>
+</td>
+<td style="border: 0; width: 50%; text-align: center; vertical-align: top; padding: 0.4rem 0.6rem;">
+<img src="./images/agents.md.png" alt="AGENTS.md content" style="display: block; margin: 0 auto; width: 100%; max-width: 320px; border-radius: 12px;">
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.5rem;">AGENTS.md example</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- SPEAKER NOTES
+The model without AGENTS.md explores blindly — reading files, running searches, guessing conventions. AGENTS.md gives it a map upfront, slashing exploration costs.
+-->
+
+------
+
 <!--slide-attr x=6400 y=0 scale=1.0 -->
 
 # Sandbox Execution

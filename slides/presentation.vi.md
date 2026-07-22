@@ -227,6 +227,31 @@ chạy tìm kiếm, đoán sai. AGENTS.md tốt loại bỏ chi phí khám phá
 
 ------
 
+<!--slide-attr x=6400 y=600 scale=1.0 -->
+
+# AGENTS.md
+
+<table style="border: 0; background: transparent; margin-top: 0.5rem;">
+<tbody>
+<tr>
+<td style="border: 0; width: 50%; text-align: center; vertical-align: top; padding: 0.4rem 0.6rem;">
+<img src="./images/maze.jpg" alt="Project maze" style="display: block; margin: 0 auto; width: 100%; max-width: 320px; border-radius: 12px;">
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.5rem;">Mê cung và bản đồ dẫn đường</div>
+</td>
+<td style="border: 0; width: 50%; text-align: center; vertical-align: top; padding: 0.4rem 0.6rem;">
+<img src="./images/agents.md.png" alt="AGENTS.md content" style="display: block; margin: 0 auto; width: 100%; max-width: 320px; border-radius: 12px;">
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.5rem;">Ví dụ AGENTS.md</div>
+</td>
+</tr>
+</tbody>
+</table>
+
+<!-- SPEAKER NOTES
+Model không có AGENTS.md khám phá mù quáng — đọc file, chạy tìm kiếm, đoán quy ước. AGENTS.md cung cấp bản đồ từ đầu, cắt giảm chi phí khám phá.
+-->
+
+------
+
 <!--slide-attr x=6400 y=0 scale=1.0 -->
 
 # Sandbox Execution
