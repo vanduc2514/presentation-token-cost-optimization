@@ -168,23 +168,22 @@ and to identify where cache is being invalidated unexpectedly.
 
 # Cache Pricing
 
-> GitHub Copilot charges per 1M tokens. Cached input = 90% off.
+> AI Credits per 1M tokens. Cached input = 90% off.
 
-| Model | Input | Cached | Output |
-|---|---|---|---|
-| <img src="./images/GPT-5.4-mini.png" alt="GPT-5.4 mini" width="42" style="vertical-align: middle;"> | $0.75 | $0.075 | $4.50 |
-| <img src="./images/Sonnet 4.6.png" alt="Claude Haiku 4.5" width="42" style="vertical-align: middle;"> | $1.00 | $0.10 | $5.00 |
-| <img src="./images/GPT-5.4.png" alt="GPT-5.4" width="42" style="vertical-align: middle;"> | $2.50 | $0.25 | $15.00 |
-| <img src="./images/Sonnet 4.6.png" alt="Claude Sonnet 4" width="42" style="vertical-align: middle;"> | $3.00 | $0.30 | $15.00 |
-| <img src="./images/GPT-5.5.png" alt="GPT-5.5" width="42" style="vertical-align: middle;"> | $5.00 | $0.50 | $30.00 |
-| <img src="./images/Opus 4.6.png" alt="Claude Opus 4.5" width="42" style="vertical-align: middle;"> | $5.00 | $0.50 | $25.00 |
+| Model | Non-Cache | Cache |
+|---|---|---|
+| GPT-5.4 mini | 75 / 450 | 7.5 / 450 |
+| Claude Haiku 4.5 | 100 / 500 | 10 / 500 |
+| GPT-5.4 | 250 / 1500 | 25 / 1500 |
+| Claude Sonnet 4 | 300 / 1500 | 30 / 1500 |
+| GPT-5.5 | 500 / 3000 | 50 / 3000 |
+| Claude Opus 4.5 | 500 / 2500 | 50 / 2500 |
 
 <!-- SPEAKER NOTES
 Prices shown are per million tokens from GitHub Copilot's official
 pricing page (docs.github.com/copilot/reference/.../models-and-pricing).
-The caching discount is consistent across all models: cached input is
-10% of the fresh input price. The output/input ratio is about 5-6x.
-Source: GitHub Copilot Models and Pricing docs.
+1 AI Credit = $0.01 USD. Cached input = 10% of fresh input price (~10x reduction).
+The output/input ratio is about 5-6x. Source: GitHub Copilot Models and Pricing.
 -->
 
 ------
