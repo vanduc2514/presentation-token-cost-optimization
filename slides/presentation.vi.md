@@ -331,6 +331,8 @@ token đầu ra. Đặc biệt hữu ích cho pipeline tự động.
 
 <img src="./images/caveman.png" alt="Caveman skill" class="zoomable-img" style="display: block; margin: 0.8rem auto 0; max-width: 85%; height: auto; border-radius: 12px;">
 
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.6rem;">Caveman skill buộc phản hồi tối thiểu, ngắn gọn - chỉ câu trả lời, không dài dòng</div>
+
 <!-- SPEAKER NOTES
 Caveman skill buộc model phản hồi ngắn gọn, tối thiểu. Thay vì giải thích
 dài dòng, nó chỉ đưa ra câu trả lời. Điều này giảm đáng kể số token đầu ra

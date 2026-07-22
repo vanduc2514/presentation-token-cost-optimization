@@ -333,6 +333,8 @@ output tokens significantly. Especially useful for automated pipelines.
 
 <img src="./images/caveman.png" alt="Caveman skill" class="zoomable-img" style="display: block; margin: 0.8rem auto 0; max-width: 85%; height: auto; border-radius: 12px;">
 
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.6rem;">Caveman skill forces minimal, terse responses - only the answer, no fluff</div>
+
 <!-- SPEAKER NOTES
 The caveman skill forces the model to respond in terse, minimal fashion.
 Instead of lengthy explanations, it gives just the answer. This dramatically
