@@ -302,6 +302,8 @@ kiểm tra chỉ cần pattern matching. Khả năng khác nhau, model khác nha
 - **Tiền tố ổn định**: đặt hướng dẫn sớm, giữ không đổi
 - **Một phiên, một tác vụ**: tránh trôi ngữ cảnh
 
+<div class="impact-box"><strong>Tác động:</strong> Cache tái sử dụng tiền tố chung giữa các request, giảm chi phí token lặp lại trong phiên dài</div>
+
 <!-- SPEAKER NOTES
 Cache rất dễ vỡ. Nếu bạn đổi từ Sonnet sang Haiku giữa tác vụ, cache
 bị reset. Nếu dùng lại phiên cho tác vụ khác với hướng dẫn khác, cache

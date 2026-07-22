@@ -303,6 +303,8 @@ only needs pattern matching. Different capabilities, different models.
 - **Stable prefix**: put instructions early, keep them unchanged
 - **One session, one task**: avoid context drift
 
+<div class="impact-box"><strong>Impact:</strong> Cache reuses the common prefix across requests, reducing repeated token costs in long sessions</div>
+
 <!-- SPEAKER NOTES
 The cache is fragile. If you switch from Sonnet to Haiku mid-task, it resets.
 If you reuse a session for a different task with different instructions, it
