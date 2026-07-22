@@ -314,6 +314,7 @@ const customCss = `
     #step-5 table { table-layout: fixed; }
     #step-5 td { text-align: center; vertical-align: middle; padding: 0.6rem 0.4rem; }
     #step-7, #step-8, #step-9, #step-10 { --group-accent: #3b82f6; }
+    #step-9 td:first-child { text-align: center; vertical-align: middle; }
     #step-11, #step-12, #step-13, #step-14, #step-15, #step-16 { --group-accent: #a855f7; }
     #step-17, #step-18 { --group-accent: #f59e0b; }
 

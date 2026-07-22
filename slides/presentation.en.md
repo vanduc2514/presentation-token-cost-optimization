@@ -132,7 +132,7 @@ Auto-routing makes this transparent to the developer.
 
 <!--slide-attr x=1600 y=2400 scale=1.0 -->
 
-# Leverage Prompt Caching
+# Understand Prompt Caching
 
 > Server caches the common prefix of your prompt across requests
 
@@ -150,7 +150,7 @@ across a session is critical for maximum cache hits.
 
 <!--slide-attr x=2400 y=2400 scale=1.0 -->
 
-# Cache Explorer
+# VSCode Built-in Cache Explorer
 
 <img src="./images/prompt-cache-explorer.png" alt="Prompt Cache Explorer" class="zoomable-img" width="85%" style="max-width: 800px; display: block; margin: 1.2rem auto 0;" />
 
@@ -172,16 +172,12 @@ and to identify where cache is being invalidated unexpectedly.
 
 | Model | Input | Cached | Output |
 |---|---|---|---|
-| GPT-5.4 mini | $0.75 | $0.075 | $4.50 |
-| Claude Haiku 4.5 | $1.00 | $0.10 | $5.00 |
-| GPT-5.4 | $2.50 | $0.25 | $15.00 |
-| Claude Sonnet 4 | $3.00 | $0.30 | $15.00 |
-| GPT-5.5 | $5.00 | $0.50 | $30.00 |
-| Claude Opus 4.5 | $5.00 | $0.50 | $25.00 |
-
-- Output costs 5-6x more than input per token
-- Cached input is 90% cheaper than fresh input
-- Prices vary by model tier (lightweight vs powerful)
+| <img src="./images/GPT-5.4-mini.png" alt="GPT-5.4 mini" width="42" style="vertical-align: middle;"> | $0.75 | $0.075 | $4.50 |
+| <img src="./images/Sonnet 4.6.png" alt="Claude Haiku 4.5" width="42" style="vertical-align: middle;"> | $1.00 | $0.10 | $5.00 |
+| <img src="./images/GPT-5.4.png" alt="GPT-5.4" width="42" style="vertical-align: middle;"> | $2.50 | $0.25 | $15.00 |
+| <img src="./images/Sonnet 4.6.png" alt="Claude Sonnet 4" width="42" style="vertical-align: middle;"> | $3.00 | $0.30 | $15.00 |
+| <img src="./images/GPT-5.5.png" alt="GPT-5.5" width="42" style="vertical-align: middle;"> | $5.00 | $0.50 | $30.00 |
+| <img src="./images/Opus 4.6.png" alt="Claude Opus 4.5" width="42" style="vertical-align: middle;"> | $5.00 | $0.50 | $25.00 |
 
 <!-- SPEAKER NOTES
 Prices shown are per million tokens from GitHub Copilot's official
