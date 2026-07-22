@@ -171,12 +171,12 @@ vô hiệu hóa bất ngờ.
 
 | Model | Non-Cache | Cache |
 |---|---|---|
-| GPT-5.4 mini | 75 / 450 | 7.5 / 450 |
-| Claude Haiku 4.5 | 100 / 500 | 10 / 500 |
-| GPT-5.4 | 250 / 1500 | 25 / 1500 |
-| Claude Sonnet 4 | 300 / 1500 | 30 / 1500 |
-| GPT-5.5 | 500 / 3000 | 50 / 3000 |
-| Claude Opus 4.5 | 500 / 2500 | 50 / 2500 |
+| GPT-5.4 mini | 75 / 450 | 7 / 0 |
+| MAI Code 1 Flash | 75 / 450 | 7 / 0 |
+| GPT-5.4 | 250 / 1500 | 25 / 0 |
+| Claude Sonnet 4.6 | 300 / 1500 | 30 / 375 |
+| GPT-5.5 | 500 / 3000 | 50 / 0 |
+| Claude Opus 4.6 | 500 / 2500 | 50 / 625 |
 
 <!-- SPEAKER NOTES
 Giá hiển thị là trên 1 triệu token từ trang pricing chính thức
