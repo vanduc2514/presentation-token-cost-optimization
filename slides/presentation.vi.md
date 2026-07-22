@@ -265,25 +265,6 @@ token đầu ra. Đặc biệt hữu ích cho pipeline tự động.
 
 ------
 
-<!--slide-attr x=6400 y=-1800 scale=1.0 -->
-
-# Tối ưu Dựa Trên Model
-
-| | Model Phù Hợp | Đúng Việc Đúng Model |
-|---|---|---|
-| **Cách tiếp cận** | Ghép năng lực với nhu cầu | Phân luồng theo độ phức tạp |
-| **Phương pháp** | Chọn model, phân cấp model | Chuyên môn hóa Agent |
-| **Tác động** | Không trả tiền thừa cho năng lực | Hiệu suất tối đa mỗi tác vụ |
-
-<!-- SPEAKER NOTES
-Hai chiều của tối ưu model. Đầu tiên: chọn model rẻ nhất có thể làm
-được việc — đừng dùng Opus để sửa một dòng lint. Thứ hai: phân luồng
-công việc cho các agent chuyên biệt để mỗi tác vụ dùng model tối ưu.
-Slide tiếp theo cho thấy các agent chuyên dụng trong thực tế.
--->
-
-------
-
 <!--slide-attr x=6400 y=-2400 scale=1.0 -->
 
 # Custom Agents
@@ -305,7 +286,7 @@ kiểm tra chỉ cần pattern matching. Khả năng khác nhau, model khác nha
 
 <!--slide-attr x=4800 y=-2400 scale=1.0 -->
 
-# Quy Tắc Prompt Caching
+# Tận Dụng Prompt Caching
 
 > Giữ cache luôn nóng
 

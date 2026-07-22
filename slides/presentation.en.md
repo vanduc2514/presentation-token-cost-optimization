@@ -266,25 +266,6 @@ output tokens significantly. Especially useful for automated pipelines.
 
 ------
 
-<!--slide-attr x=6400 y=-1800 scale=1.0 -->
-
-# Model Based Optimization
-
-| | Right Model | Right Task |
-|---|---|---|
-| **Approach** | Match capability to need | Route work by complexity |
-| **Methods** | Model selection, tier routing | Agent specialization |
-| **Impact** | No overpay for capability | Max efficiency per task |
-
-<!-- SPEAKER NOTES
-Two dimensions of model optimization. First: pick the cheapest model
-that can do the job — do not use Opus for a one-line lint fix. Second:
-route work to specialized agents so each task uses the optimal model.
-The next slide shows dedicated agents in practice.
--->
-
-------
-
 <!--slide-attr x=6400 y=-2400 scale=1.0 -->
 
 # Custom Agents
@@ -306,7 +287,7 @@ only needs pattern matching. Different capabilities, different models.
 
 <!--slide-attr x=4800 y=-2400 scale=1.0 -->
 
-# Prompt Caching Rules
+# Utilize Prompt Caching
 
 > Keep the cache warm
 
