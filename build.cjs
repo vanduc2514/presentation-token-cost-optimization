@@ -213,9 +213,9 @@ const customCss = `
       background: #f0fdf4;
       border: 1px solid #bbf7d0;
       border-radius: 10px;
-      font-size: clamp(0.95rem, 1.8vmin, 1.1rem);
+      font-size: clamp(1.15rem, 1.9vmin, 1.5rem);
       color: #166534;
-      line-height: 1.4;
+      line-height: 1.5;
     }
     .impact-box strong {
       font-weight: 600;
@@ -301,7 +301,7 @@ const customCss = `
         white-space: pre;
         word-break: normal;
       }
-      .impact-box { font-size: clamp(0.9rem, 1.7vmin, 1.05rem); padding: 0.5rem 0.8rem; }
+      .impact-box { font-size: clamp(1rem, 2.4vmin, 1.2rem); padding: 0.5rem 0.8rem; }
     }
 
     /* ── TITLE SLIDE ───────────────────────────────────────────────────── */
