@@ -102,6 +102,8 @@ Token Vào trước.
 </tbody>
 </table>
 
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.2rem;">So sánh giá model theo các cấp</div>
+
 <!-- SPEAKER NOTES
 Hai yếu tố chi phối: chọn cấp model và khoảng cách giá đầu vào/đầu ra.
 Phản hồi dài dòng từ model lớn là trường hợp tệ nhất. Tập trung tối ưu
@@ -138,6 +140,8 @@ Auto-routing giúp việc này trong suốt với developer.
 
 ![Prompt Caching Diagram](./images/prompt-caching.svg)
 
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.2rem;">Cơ chế cache dựa trên tiền tố chung giữa các request</div>
+
 <!-- SPEAKER NOTES
 Cache hoạt động dựa trên khớp tiền tố. Mọi thứ trước breakpoint
 phải giống hệt nhau từng byte. Sơ đồ cho thấy hai request với
@@ -154,6 +158,8 @@ dùng khác nhau nên không được cache.
 # Cache Explorer có sẵn trong VSCode
 
 <img src="./images/prompt-cache-explorer.png" alt="Prompt Cache Explorer" class="zoomable-img" width="60%" style="max-width: 560px; display: block; margin: 0.6rem auto 0;" />
+
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.2rem;">Bảng thống kê cache tích hợp sẵn trong VS Code</div>
 
 <!-- SPEAKER NOTES
 Đây là bảng Cache Explorer trong VS Code. Nó hiển thị thống kê
@@ -368,6 +374,8 @@ kiểm tra chỉ cần pattern matching. Khả năng khác nhau, model khác nha
 
 <img src="./images/agents-workflow.png" alt="Agents workflow" class="zoomable-img" style="display: block; margin: 1.2rem auto 0; max-width: 95%; height: auto; border-radius: 12px;">
 
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.2rem;">Pipeline agent: lập kế hoạch, triển khai, kiểm tra</div>
+
 <!-- SPEAKER NOTES
 Mỗi tác vụ đi qua một pipeline các agent chuyên biệt. Agent lập kế hoạch
 thiết kế kiến trúc dùng model lớn. Agent triển khai viết code dùng model
@@ -489,6 +497,8 @@ Thiết lập baseline về mức sử dụng token hiện tại. Chạy cùng w
 </tr>
 </tbody>
 </table>
+
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.2rem;">OpenTelemetry tracing và kiểm soát cửa sổ ngữ cảnh</div>
 
 <!-- SPEAKER NOTES
 Dashboard và tracing giúp bạn biết thứ gì đang tiêu tốn chi phí. Bảng

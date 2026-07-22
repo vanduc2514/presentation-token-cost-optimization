@@ -102,6 +102,8 @@ Token In first.
 </tbody>
 </table>
 
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.2rem;">Model pricing comparison across tiers</div>
+
 <!-- SPEAKER NOTES
 Two dominant factors: model tier selection and the input/output rate gap.
 A verbose response from a large model is the worst case. Most optimization
@@ -138,6 +140,8 @@ Auto-routing makes this transparent to the developer.
 
 ![Prompt Caching Diagram](./images/prompt-caching.svg)
 
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.2rem;">Prefix-based cache matching between requests</div>
+
 <!-- SPEAKER NOTES
 The cache operates on prefix matching. Everything before the breakpoint
 must be byte-identical. The diagram shows two requests where the system
@@ -155,6 +159,8 @@ across a session is critical for maximum cache hits.
 # VSCode Built-in Cache Explorer
 
 <img src="./images/prompt-cache-explorer.png" alt="Prompt Cache Explorer" class="zoomable-img" width="60%" style="max-width: 560px; display: block; margin: 0.6rem auto 0;" />
+
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.2rem;">Built-in cache statistics panel in VS Code</div>
 
 <!-- SPEAKER NOTES
 This is the actual cache explorer panel in VS Code. It shows you
@@ -370,6 +376,8 @@ only needs pattern matching. Different capabilities, different models.
 
 <img src="./images/agents-workflow.png" alt="Agents workflow" class="zoomable-img" style="display: block; margin: 1.2rem auto 0; max-width: 95%; height: auto; border-radius: 12px;">
 
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.2rem;">Agent pipeline: plan, implement, review</div>
+
 <!-- SPEAKER NOTES
 Each task goes through a pipeline of specialized agents. The planning agent
 designs the architecture using a large reasoning model. The implementation
@@ -491,6 +499,8 @@ measurement, you are guessing.
 </tr>
 </tbody>
 </table>
+
+<div style="text-align: center; font-size: clamp(0.85rem, 1.5vmin, 1.05rem); color: #52525b; margin-top: 0.2rem;">OpenTelemetry tracing and context window controls</div>
 
 <!-- SPEAKER NOTES
 Tracing and dashboards give you the visibility to know what is costing you
