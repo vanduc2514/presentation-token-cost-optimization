@@ -159,13 +159,18 @@
         if (data.type === 'cmd') {
           var api = window.impress && window.impress();
           if (!api) return;
-          if (data.cmd === 'next') {
-            var info = currentSlideInfo();
-            if (info && info.index >= info.total && info.nextStepId) api.goto(info.nextStepId);
-            else api.next();
+          var steps = Array.from(document.querySelectorAll('.step'));
+          var active = document.querySelector('.step.active');
+          var idx = steps.indexOf(active);
+          if (data.cmd === 'next' && idx >= 0 && idx < steps.length - 1) {
+            api.goto(steps[idx + 1].id);
           }
-          else if (data.cmd === 'prev')              api.prev();
-          else if (data.cmd === 'goto' && data.step) api.goto(data.step);
+          else if (data.cmd === 'prev' && idx > 0) {
+            api.goto(steps[idx - 1].id);
+          }
+          else if (data.cmd === 'goto' && data.step) {
+            api.goto(data.step);
+          }
         }
       };
 
