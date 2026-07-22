@@ -217,7 +217,7 @@ cả hai.
 - Model đọc quy ước một lần thay vì khám phá lại mỗi lượt
 - Định nghĩa: kiến trúc, cấu trúc file, phong cách code, lệnh build
 
-<div class="impact-box"><strong>Kết quả:</strong> Ít tool call hơn, ít giả định sai hơn, ít vòng sửa lỗi hơn</div>
+<div class="impact-box"><strong>Tác động:</strong> Ít tool call hơn, ít giả định sai hơn, ít vòng sửa lỗi hơn</div>
 
 <!-- SPEAKER NOTES
 Không có AGENTS.md, model khám phá codebase bằng cách đọc file,

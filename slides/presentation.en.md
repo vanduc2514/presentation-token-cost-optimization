@@ -218,7 +218,7 @@ come from a combination of both.
 - Model reads conventions once instead of re-discovering each turn
 - Define: architecture, file layout, coding style, build commands
 
-<div class="impact-box"><strong>Result:</strong> Fewer tool calls, fewer wrong assumptions, fewer correction rounds</div>
+<div class="impact-box"><strong>Impact:</strong> Fewer tool calls, fewer wrong assumptions, fewer correction rounds</div>
 
 <!-- SPEAKER NOTES
 Without AGENTS.md, the model explores your codebase by reading files,
