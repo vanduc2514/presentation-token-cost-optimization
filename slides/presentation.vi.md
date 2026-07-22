@@ -2,14 +2,14 @@
 {
   "autoSplit": false,
   "sanitize": false,
-  "title": "Tối ưu Chi phí Token trong Phát triển với AI"
+  "title": "Hiểu và Tối ưu Chi phí Token của Coding Agent"
 }
 markpress-opt-->
 
 <!--slide-attr x=0 y=0 scale=1.2 -->
 
-# Tối ưu Chi phí Token
-## Chiến lược thực tế cho phát triển với AI
+# Hiểu và Tối ưu Chi phí Token của Coding Agent
+## Hướng dẫn thực tế để phát triển AI tiết kiệm
 
 Duc Nguyen
 

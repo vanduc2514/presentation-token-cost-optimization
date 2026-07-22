@@ -2,14 +2,14 @@
 {
   "autoSplit": false,
   "sanitize": false,
-  "title": "Token Cost Optimization in AI-Assisted Development"
+  "title": "Understand and Optimize Coding Agent Token Cost"
 }
 markpress-opt-->
 
 <!--slide-attr x=0 y=0 scale=1.2 -->
 
-# Token Cost Optimization
-## Practical strategies for AI-assisted development
+# Understand and Optimize Coding Agent Token Cost
+## A practical guide to cost-efficient AI development
 
 Duc Nguyen
 
