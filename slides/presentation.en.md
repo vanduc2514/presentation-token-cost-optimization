@@ -152,7 +152,7 @@ across a session is critical for maximum cache hits.
 
 # VSCode Built-in Cache Explorer
 
-<img src="./images/prompt-cache-explorer.png" alt="Prompt Cache Explorer" class="zoomable-img" width="85%" style="max-width: 800px; display: block; margin: 1.2rem auto 0;" />
+<img src="./images/prompt-cache-explorer.png" alt="Prompt Cache Explorer" class="zoomable-img" width="60%" style="max-width: 560px; display: block; margin: 0.6rem auto 0;" />
 
 <!-- SPEAKER NOTES
 This is the actual cache explorer panel in VS Code. It shows you

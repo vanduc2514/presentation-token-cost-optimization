@@ -151,7 +151,7 @@ dùng khác nhau nên không được cache.
 
 # Cache Explorer có sẵn trong VSCode
 
-<img src="./images/prompt-cache-explorer.png" alt="Prompt Cache Explorer" class="zoomable-img" width="85%" style="max-width: 800px; display: block; margin: 1.2rem auto 0;" />
+<img src="./images/prompt-cache-explorer.png" alt="Prompt Cache Explorer" class="zoomable-img" width="60%" style="max-width: 560px; display: block; margin: 0.6rem auto 0;" />
 
 <!-- SPEAKER NOTES
 Đây là bảng Cache Explorer trong VS Code. Nó hiển thị thống kê
