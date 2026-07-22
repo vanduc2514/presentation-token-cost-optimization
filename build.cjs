@@ -308,12 +308,12 @@ const customCss = `
     #step-4 { --group-accent: #ef4444; }
     #step-4 table { table-layout: fixed; }
     #step-4 th, #step-4 td { width: 50%; }
-    #step-11 table { table-layout: fixed; }
+    #step-10 table { table-layout: fixed; }
 
     #step-5, #step-6 { --group-accent: #22c55e; }
     #step-5 table { table-layout: fixed; }
     #step-5 td { text-align: center; vertical-align: middle; padding: 0.6rem 0.4rem; }
-    #step-7, #step-8, #step-9, #step-10 { --group-accent: #3b82f6; }
+    #step-7, #step-8, #step-9 { --group-accent: #3b82f6; }
     #step-9 table { table-layout: fixed; }
     #step-9 th, #step-9 td { text-align: center; }
     #step-9 td:first-child { text-align: left; }
@@ -325,12 +325,12 @@ const customCss = `
       border-radius: 6px;
       display: inline-block;
     }
-    #step-11, #step-12, #step-13, #step-14, #step-15, #step-16 { --group-accent: #a855f7; }
-    #step-17, #step-18 { --group-accent: #f59e0b; }
+    #step-10, #step-11, #step-12, #step-13, #step-14, #step-15, #step-16, #step-17, #step-18, #step-19 { --group-accent: #a855f7; }
+    #step-20, #step-21 { --group-accent: #f59e0b; }
 
     /* ── THANK YOU SLIDE ───────────────────────────────────────────────── */
-    #step-18 { justify-content: center; }
-    #step-18 table {
+    #step-21 { justify-content: center; }
+    #step-21 table {
       width: min(100%, 720px);
       margin: 1rem auto 0;
       border: 0;
@@ -338,7 +338,7 @@ const customCss = `
       table-layout: fixed;
       border-spacing: 26px 8px;
     }
-    #step-18 thead th {
+    #step-21 thead th {
       background: transparent;
       color: var(--ink-dim);
       text-transform: none;
@@ -349,20 +349,20 @@ const customCss = `
       border: 0;
       padding-bottom: 0.2rem;
     }
-    #step-18 td {
+    #step-21 td {
       border: 0;
       text-align: center;
       width: 50%;
       padding: 0.2rem 0.25rem;
       background: transparent;
     }
-    #step-18 tbody tr:nth-child(1) img {
+    #step-19 tbody tr:nth-child(1) img {
       width: 180px;
       height: 180px;
       object-fit: contain;
       margin: 0 auto;
     }
-    #step-18 tbody tr:nth-child(2) img {
+    #step-19 tbody tr:nth-child(2) img {
       width: 36px;
       height: 36px;
       object-fit: contain;
@@ -637,6 +637,10 @@ function buildPresentation(input, output, langSwitcher) {
   document.getElementById('nav-next').addEventListener('click', function () {
     goToStep(currentStepIndex() + 1);
   });
+
+  // Disable impress.js built-in keyboard navigation by overriding next/prev
+  api.next = function(){};
+  api.prev = function(){};
 
   document.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowLeft') { e.preventDefault(); goToStep(currentStepIndex() - 1); }

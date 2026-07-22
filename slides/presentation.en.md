@@ -146,6 +146,8 @@ is different, so it is not cached. Keeping your instructions stable
 across a session is critical for maximum cache hits.
 -->
 
+
+
 ------
 
 <!--slide-attr x=2400 y=2400 scale=1.0 -->
@@ -296,35 +298,63 @@ resets. Design your workflow around these constraints to maximize cache hits.
 
 ------
 
-<!--slide-attr x=3200 y=-2400 scale=1.0 -->
+<!--slide-attr x=4000 y=-2400 scale=1.0 -->
 
-# TTL and Cache Invalidation
+# What Kills the Cache?
 
-> Know what keeps the cache alive and what kills it
+<img src="./images/cache-miss-model.png" alt="Model switch" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
 
-| Action | Effect on Cache |
-|---|---|
-| Same model, same prefix | Hit (warm) |
-| Same session, continuous turns | Hit (refreshed) |
-| Switch model mid-session | **Miss** (cold) |
-| Change system prompt | **Miss** (cold) |
-| Wait > TTL between turns | **Miss** (expired) |
-| Switch to different task | **Miss** (prefix mismatch) |
-
-- TTL varies by provider: ~5 min default, up to 1 hour with options
-- Every cache hit resets the TTL timer
-- Cache miss = full price on next request
+<div style="text-align: center; font-size: clamp(0.85rem, 1.6vmin, 1.1rem); color: #52525b; margin-top: 0.8rem;">Switch model mid-session</div>
 
 <!-- SPEAKER NOTES
-TTL is reset on every cache hit. As long as your session is active and
-you keep the same model and prefix, the cache stays warm. The most
-common mistake: switching models mid-session instantly invalidates
-the cache.
+Changing the model mid-session invalidates the cache. The model identifier is part of the cache prefix — switching between models from any provider causes a cache miss.
+-->
+
+------
+
+<!--slide-attr x=3200 y=-2400 scale=1.0 -->
+
+# What Kills the Cache?
+
+<img src="./images/cache-miss-mode-change.png" alt="Mode change" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
+
+<div style="text-align: center; font-size: clamp(0.85rem, 1.6vmin, 1.1rem); color: #52525b; margin-top: 0.8rem;">Change agent mode</div>
+
+<!-- SPEAKER NOTES
+Switching between agent modes (e.g. from Ask to Agent) changes the system prompt prefix. The new mode prepends different instructions which breaks the byte-level cache match.
+-->
+
+------
+
+<!--slide-attr x=2400 y=-2400 scale=1.0 -->
+
+# What Kills the Cache?
+
+<img src="./images/cache-miss-tool-change.png" alt="Tool change" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
+
+<div style="text-align: center; font-size: clamp(0.85rem, 1.6vmin, 1.1rem); color: #52525b; margin-top: 0.8rem;">Different tool context</div>
+
+<!-- SPEAKER NOTES
+Different tools and their outputs are injected into the prompt prefix. When tools change between turns, the prefix changes, and the cache misses.
 -->
 
 ------
 
 <!--slide-attr x=1600 y=-2400 scale=1.0 -->
+
+# What Kills the Cache?
+
+<img src="./images/cache-expire.png" alt="Cache expire" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
+
+<div style="text-align: center; font-size: clamp(0.85rem, 1.6vmin, 1.1rem); color: #52525b; margin-top: 0.8rem;">Wait > TTL between turns</div>
+
+<!-- SPEAKER NOTES
+Cache TTL varies by provider — 5 minutes default, up to 1 hour with paid options. If you walk away mid-session and come back later, the cache has expired. Every cache hit resets the timer, so continuous use keeps it warm.
+-->
+
+------
+
+<!--slide-attr x=800 y=-2400 scale=1.0 -->
 
 # Monitoring
 

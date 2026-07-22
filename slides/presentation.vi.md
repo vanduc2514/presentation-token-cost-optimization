@@ -145,6 +145,8 @@ system prompt và AGENTS.md giống nhau -- cache hit. Câu hỏi người
 dùng khác nhau nên không được cache.
 -->
 
+
+
 ------
 
 <!--slide-attr x=2400 y=2400 scale=1.0 -->
@@ -295,34 +297,63 @@ bị reset. Thiết kế workflow quanh những ràng buộc này.
 
 ------
 
-<!--slide-attr x=3200 y=-2400 scale=1.0 -->
+<!--slide-attr x=4000 y=-2400 scale=1.0 -->
 
-# TTL và Hủy Cache
+# Điều gì Giết Cache?
 
-> Biết điều gì giữ cache sống và điều gì hủy nó
+<img src="./images/cache-miss-model.png" alt="Model switch" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
 
-| Hành động | Ảnh hưởng Cache |
-|---|---|
-| Cùng model, cùng tiền tố | Hit (nóng) |
-| Cùng phiên, liên tục | Hit (làm mới) |
-| Đổi model giữa phiên | **Miss** (nguội) |
-| Thay đổi system prompt | **Miss** (nguội) |
-| Chờ > TTL giữa các lượt | **Miss** (hết hạn) |
-| Chuyển tác vụ khác | **Miss** (tiền tố khác) |
-
-- TTL tùy provider: ~5 phút mặc định, đến 1 giờ với tùy chọn
-- Mỗi cache hit reset đồng hồ TTL
-- Cache miss = giá đầy đủ cho request tiếp theo
+<div style="text-align: center; font-size: clamp(0.85rem, 1.6vmin, 1.1rem); color: #52525b; margin-top: 0.8rem;">Đổi model giữa phiên</div>
 
 <!-- SPEAKER NOTES
-TTL reset sau mỗi cache hit. Miễn phiên hoạt động và giữ cùng model
-và tiền tố, cache luôn nóng. Lỗi phổ biến nhất: đổi model giữa phiên
-lập tức hủy cache.
+Đổi model giữa phiên làm hỏng cache vì định danh model là một phần của tiền tố cache. Ngay cả đổi giữa các model từ cùng nhà cung cấp cũng gây cache miss.
+-->
+
+------
+
+<!--slide-attr x=3200 y=-2400 scale=1.0 -->
+
+# Điều gì Giết Cache?
+
+<img src="./images/cache-miss-mode-change.png" alt="Mode change" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
+
+<div style="text-align: center; font-size: clamp(0.85rem, 1.6vmin, 1.1rem); color: #52525b; margin-top: 0.8rem;">Đổi chế độ agent</div>
+
+<!-- SPEAKER NOTES
+Chuyển giữa các chế độ agent (ví dụ từ Ask sang Agent) thay đổi tiền tố system prompt. Chế độ mới thêm hướng dẫn khác, phá vỡ khớp cache ở cấp byte.
+-->
+
+------
+
+<!--slide-attr x=2400 y=-2400 scale=1.0 -->
+
+# Điều gì Giết Cache?
+
+<img src="./images/cache-miss-tool-change.png" alt="Tool change" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
+
+<div style="text-align: center; font-size: clamp(0.85rem, 1.6vmin, 1.1rem); color: #52525b; margin-top: 0.8rem;">Ngữ cảnh công cụ khác</div>
+
+<!-- SPEAKER NOTES
+Các công cụ khác nhau và output của chúng được chèn vào tiền tố prompt. Khi tools thay đổi giữa các lượt, tiền tố thay đổi, cache miss.
 -->
 
 ------
 
 <!--slide-attr x=1600 y=-2400 scale=1.0 -->
+
+# Điều gì Giết Cache?
+
+<img src="./images/cache-expire.png" alt="Cache expire" class="zoomable-img" style="display: block; margin: 1.5rem auto 0; max-height: 350px; width: auto; border-radius: 10px;">
+
+<div style="text-align: center; font-size: clamp(0.85rem, 1.6vmin, 1.1rem); color: #52525b; margin-top: 0.8rem;">Chờ quá TTL giữa các turn</div>
+
+<!-- SPEAKER NOTES
+TTL cache tùy theo nhà cung cấp — mặc định ~5 phút, lên đến 1 giờ với tùy chọn trả phí. Nếu rời giữa phiên và quay lại sau, cache đã hết hạn. Mỗi cache hit reset đồng hồ, vì vậy sử dụng liên tục luôn giữ cache ấm.
+-->
+
+------
+
+<!--slide-attr x=800 y=-2400 scale=1.0 -->
 
 # Giám Sát
 
