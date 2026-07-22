@@ -215,7 +215,17 @@ const customCss = `
       border: 1px solid var(--line);
       border-radius: 20px;
       background: #ffffff;
+      overflow: hidden;
     }
+
+    .step thead th:first-child { border-radius: 19px 0 0 0; }
+    .step thead th:last-child { border-radius: 0 19px 0 0; }
+    .step tbody tr:first-child th:first-child,
+    .step tbody tr:first-child td:first-child { border-radius: 19px 0 0 0; }
+    .step tbody tr:first-child th:last-child,
+    .step tbody tr:first-child td:last-child { border-radius: 0 19px 0 0; }
+    .step tbody tr:last-child td:first-child { border-radius: 0 0 0 19px; }
+    .step tbody tr:last-child td:last-child { border-radius: 0 0 19px 0; }
 
     .step thead th {
       background: #f4f4f5;
