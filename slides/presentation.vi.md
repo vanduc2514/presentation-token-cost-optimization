@@ -169,7 +169,7 @@ vô hiệu hóa bất ngờ.
 
 # Chi Phí Cache
 
-| Model | Non-Cache (In/Out) | Cache (In/Out) |
+| Model | Cache Miss (In/Out) | Cache (In/Out) |
 |---|---|---|
 | GPT-5.4 mini | 75 / 450 | <span class="cache-free">7 / 0</span> |
 | MAI Code 1 Flash | 75 / 450 | <span class="cache-free">7 / 0</span> |
