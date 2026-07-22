@@ -275,6 +275,21 @@ the largest source of token waste.
 
 ------
 
+<!--slide-attr x=6400 y=-600 scale=1.0 -->
+
+# How Sandbox Works
+
+<img src="./images/sandbox-mechanism.png" alt="Sandbox mechanism" class="zoomable-img" style="display: block; margin: 0.8rem auto 0; max-width: 90%; height: auto; border-radius: 12px;">
+
+<!-- SPEAKER NOTES
+This diagram shows the core sandbox pattern. Large data stays outside the
+context window. The sandbox processes logs, tool outputs, and source files,
+then only the 3KB summary enters the LLM context. This single pattern eliminates
+the largest source of token waste.
+-->
+
+------
+
 <!--slide-attr x=6400 y=-1200 scale=1.0 -->
 
 # Skills and Output Constraints

@@ -1,0 +1,24 @@
+flowchart TD
+    subgraph Workspace["Workspace / Project"]
+        direction LR
+        A["Large Log File<br/>700KB"]
+        B["Tool Output"] 
+        C["Source Files"]
+    end
+
+    subgraph Context["Context Window (LLM)"]
+        D["Model receives<br/>summary only"]
+    end
+
+    subgraph Sandbox["Sandbox Environment"]
+        E["Run analysis<br/>grep, filter, aggregate"]
+    end
+
+    A --> E
+    B --> E
+    C --> E
+    E --> |"3KB summary"| D
+
+    style D fill:#3b82f6,color:#fff,stroke:#2563eb,stroke-width:2px
+    style Sandbox fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#166534
+    style Workspace fill:#f8fafc,stroke:#94a3b8,stroke-width:1px,color:#475569

@@ -274,6 +274,20 @@ nguồn lãng phí token lớn nhất.
 
 ------
 
+<!--slide-attr x=6400 y=-600 scale=1.0 -->
+
+# Sandbox Hoạt Động Thế Nào
+
+<img src="./images/sandbox-mechanism.png" alt="Sandbox mechanism" class="zoomable-img" style="display: block; margin: 0.8rem auto 0; max-width: 90%; height: auto; border-radius: 12px;">
+
+<!-- SPEAKER NOTES
+Sơ đồ này cho thấy mẫu sandbox cốt lõi. Dữ liệu lớn ở bên ngoài cửa sổ
+ngữ cảnh. Sandbox xử lý log, output công cụ, và source files, sau đó chỉ
+tóm tắt 3KB vào ngữ cảnh LLM. Mẫu này loại bỏ nguồn lãng phí token lớn nhất.
+-->
+
+------
+
 <!--slide-attr x=6400 y=-1200 scale=1.0 -->
 
 # Skills và Ràng Buộc Output

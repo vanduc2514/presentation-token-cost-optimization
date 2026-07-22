@@ -341,11 +341,11 @@ const customCss = `
       display: inline-block;
     }
     #step-10, #step-11, #step-12, #step-13, #step-14, #step-15, #step-16, #step-17, #step-18, #step-19, #step-20, #step-21 { --group-accent: #a855f7; }
-    #step-22 { --group-accent: #f59e0b; }
+    #step-22, #step-23 { --group-accent: #f59e0b; }
 
     /* ── THANK YOU SLIDE ───────────────────────────────────────────────── */
-    #step-22 { justify-content: center; }
-    #step-22 table {
+    #step-23 { justify-content: center; }
+    #step-23 table {
       width: min(100%, 720px);
       margin: 1rem auto 0;
       border: 0;
@@ -353,7 +353,7 @@ const customCss = `
       table-layout: fixed;
       border-spacing: 26px 8px;
     }
-    #step-22 thead th {
+    #step-23 thead th {
       background: transparent;
       color: var(--ink-dim);
       text-transform: none;
@@ -364,21 +364,21 @@ const customCss = `
       border: 0;
       padding-bottom: 0.2rem;
     }
-    #step-22 td {
+    #step-23 td {
       border: 0;
       text-align: center;
       width: 50%;
       padding: 0.2rem 0.25rem;
       background: transparent;
     }
-    #step-22 tbody tr:nth-child(1) img {
+    #step-23 tbody tr:nth-child(1) img {
       width: 180px;
       height: 180px;
       object-fit: contain;
       display: block;
       margin: 0 auto;
     }
-    #step-22 tbody tr:nth-child(2) img {
+    #step-23 tbody tr:nth-child(2) img {
       width: 36px;
       height: 36px;
       object-fit: contain;
