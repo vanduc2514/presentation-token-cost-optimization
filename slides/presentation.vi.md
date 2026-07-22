@@ -306,7 +306,7 @@ tóm tắt 3KB vào ngữ cảnh LLM. Mẫu này loại bỏ nguồn lãng phí 
 
 <!--slide-attr x=6400 y=-1200 scale=1.0 -->
 
-# Skills và Ràng Buộc Output
+# Ràng Buộc Output
 
 > Định hình cách model phản hồi
 

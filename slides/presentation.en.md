@@ -308,7 +308,7 @@ the largest source of token waste.
 
 <!--slide-attr x=6400 y=-1200 scale=1.0 -->
 
-# Skills and Output Constraints
+# Output Constraints
 
 > Shape how the model responds
 
