@@ -155,14 +155,14 @@ const customCss = `
     }
 
     .step p, .step li, .step td, .step th, .step blockquote {
-      font-size: clamp(1rem, 1.65vmin, 1.3rem);
-      line-height: 1.45;
+      font-size: clamp(1.15rem, 1.9vmin, 1.5rem);
+      line-height: 1.5;
       color: var(--ink);
       font-weight: 400;
     }
 
     .step ul, .step ol { margin-top: 1.2rem; padding-left: 1.1em; }
-    .step li { margin: 0.45rem 0; padding-left: 0.3rem; }
+    .step li { margin: 0.5rem 0; padding-left: 0.3rem; }
     .step li::marker { color: var(--group-accent); content: "\\25b8  "; }
     .step strong { color: var(--group-accent); font-weight: 700; }
 
@@ -261,8 +261,8 @@ const customCss = `
       .step h1 { font-size: clamp(1.8rem, 4.6vmin, 2.6rem); line-height: 1.12; }
       .step h2 { font-size: clamp(0.9rem, 2.25vmin, 1.15rem); }
       .step p, .step li, .step td, .step th, .step blockquote {
-        font-size: clamp(0.9rem, 2.1vmin, 1.08rem);
-        line-height: 1.38;
+        font-size: clamp(1rem, 2.4vmin, 1.2rem);
+        line-height: 1.45;
       }
       .step pre {
         padding: 0.62rem 0.8rem;
@@ -293,15 +293,21 @@ const customCss = `
     }
     #step-1 h2 { margin-top: 0.7rem; font-weight: 400; color: var(--ink-dim); }
 
-    #step-2, #step-3, #step-4 { --group-accent: #ef4444; }
-    #step-5, #step-6, #step-7 { --group-accent: #22c55e; }
-    #step-8, #step-9, #step-10 { --group-accent: #3b82f6; }
-    #step-11, #step-12, #step-13 { --group-accent: #a855f7; }
-    #step-14, #step-15, #step-16 { --group-accent: #f59e0b; }
+    #step-2 { --group-accent: #ef4444; }
+    #step-3 { --group-accent: #22c55e; }
+    #step-4 { --group-accent: #ef4444; }
+    #step-4 table { table-layout: fixed; }
+    #step-4 th, #step-4 td { width: 50%; }
+    #step-11 table { table-layout: fixed; }
+
+    #step-5, #step-6 { --group-accent: #22c55e; }
+    #step-7, #step-8, #step-9, #step-10 { --group-accent: #3b82f6; }
+    #step-11, #step-12, #step-13, #step-14, #step-15, #step-16 { --group-accent: #a855f7; }
+    #step-17, #step-18 { --group-accent: #f59e0b; }
 
     /* ── THANK YOU SLIDE ───────────────────────────────────────────────── */
-    #step-6, #step-7 { justify-content: center; }
-    #step-6 table, #step-7 table {
+    #step-18 { justify-content: center; }
+    #step-18 table {
       width: min(100%, 720px);
       margin: 1rem auto 0;
       border: 0;
@@ -309,7 +315,7 @@ const customCss = `
       table-layout: fixed;
       border-spacing: 26px 8px;
     }
-    #step-6 thead th, #step-7 thead th {
+    #step-18 thead th {
       background: transparent;
       color: var(--ink-dim);
       text-transform: none;
@@ -320,20 +326,20 @@ const customCss = `
       border: 0;
       padding-bottom: 0.2rem;
     }
-    #step-6 td, #step-7 td {
+    #step-18 td {
       border: 0;
       text-align: center;
       width: 50%;
       padding: 0.2rem 0.25rem;
       background: transparent;
     }
-    #step-6 tbody tr:nth-child(1) img, #step-7 tbody tr:nth-child(1) img {
+    #step-18 tbody tr:nth-child(1) img {
       width: 180px;
       height: 180px;
       object-fit: contain;
       margin: 0 auto;
     }
-    #step-6 tbody tr:nth-child(2) img, #step-7 tbody tr:nth-child(2) img {
+    #step-18 tbody tr:nth-child(2) img {
       width: 36px;
       height: 36px;
       object-fit: contain;
@@ -415,6 +421,48 @@ const customCss = `
       background: rgba(15, 23, 42, 0.12);
       color: var(--ink);
     }
+
+    /* ── IMAGE ZOOM MODAL ──────────────────────────────────────────────── */
+    .img-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(0, 0, 0, 0.78);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      justify-content: center;
+      align-items: center;
+      cursor: zoom-out;
+    }
+    .img-modal.open { display: flex; }
+    .img-modal img {
+      max-width: 90vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+      cursor: default;
+      border: 0;
+    }
+    .img-modal .close-btn {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #fff;
+      font-size: 1.6rem;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 150ms;
+    }
+    .img-modal .close-btn:hover { background: rgba(255, 255, 255, 0.3); }
   </style>`;
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -540,21 +588,37 @@ function buildPresentation(input, output, langSwitcher) {
   document.body.appendChild(nav);
 
   var api = window.impress();
-  document.getElementById('nav-home').addEventListener('click', function () {
+
+  function goToStep(idx) {
     var steps = document.querySelectorAll('.step');
-    if (steps.length) api.goto(steps[0].id);
+    if (idx >= 0 && idx < steps.length) {
+      api.goto(steps[idx].id);
+    }
+  }
+
+  function currentStepIndex() {
+    var steps = document.querySelectorAll('.step');
+    var active = document.querySelector('.step.active');
+    for (var i = 0; i < steps.length; i++) {
+      if (steps[i] === active) return i;
+    }
+    return 0;
+  }
+
+  document.getElementById('nav-home').addEventListener('click', function () {
+    goToStep(0);
   });
   document.getElementById('nav-prev').addEventListener('click', function () {
-    api.prev();
+    goToStep(currentStepIndex() - 1);
   });
   document.getElementById('nav-next').addEventListener('click', function () {
-    api.next();
+    goToStep(currentStepIndex() + 1);
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft') { e.preventDefault(); api.prev(); }
-    else if (e.key === 'ArrowRight') { e.preventDefault(); api.next(); }
-    else if (e.key === 'Home') { e.preventDefault(); var steps = document.querySelectorAll('.step'); if (steps.length) api.goto(steps[0].id); }
+    if (e.key === 'ArrowLeft') { e.preventDefault(); goToStep(currentStepIndex() - 1); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); goToStep(currentStepIndex() + 1); }
+    else if (e.key === 'Home') { e.preventDefault(); goToStep(0); }
   });
 
   var _sx = 0, _sy = 0;
@@ -567,9 +631,49 @@ function buildPresentation(input, output, langSwitcher) {
     var dy = e.changedTouches[0].clientY - _sy;
     if (Math.abs(dx) >= 50 && Math.abs(dx) > Math.abs(dy)) {
       e.preventDefault();
-      if (dx > 0) api.prev(); else api.next();
+      if (dx > 0) goToStep(currentStepIndex() - 1); else goToStep(currentStepIndex() + 1);
     }
   }, { passive: false, capture: true });
+})();
+
+// ── Image zoom modal ─────────────────────────────────────────
+(function() {
+  var modal = document.createElement('div');
+  modal.className = 'img-modal';
+  modal.innerHTML =
+    '<button class="close-btn" type="button" aria-label="Close">&times;</button>'
+    + '<img alt="">';
+  document.body.appendChild(modal);
+
+  var modalImg = modal.querySelector('img');
+  var closeBtn = modal.querySelector('.close-btn');
+
+  function openModal(src) {
+    modalImg.src = src;
+    modal.classList.add('open');
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    modalImg.src = '';
+  }
+
+  document.querySelectorAll('.zoomable-img').forEach(function (img) {
+    img.addEventListener('click', function (e) {
+      e.stopPropagation();
+      openModal(img.src);
+    });
+  });
+
+  modal.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    closeModal();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+  });
 })();
 </script>
 `;

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 260" width="720" height="260">
+  <style>
+    text { font-family: "SF Mono", "Fira Code", "Courier New", monospace; font-size: 13px; }
+    .label { font-size: 11px; fill: #666; font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+    .hit-label { font-size: 12px; fill: #16a34a; font-weight: 600; font-family: "Space Grotesk", "Inter", system-ui, sans-serif; }
+  </style>
+
+  <!-- Request 1 bar background -->
+  <rect x="10" y="30" width="700" height="48" rx="8" fill="#f8fafc" stroke="#e4e4e7" stroke-width="1"/>
+
+  <!-- Request 1 segments -->
+  <rect x="10" y="30" width="260" height="48" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <rect x="268" y="30" width="200" height="48" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <rect x="466" y="30" width="244" height="48" rx="8" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+
+  <text x="140" y="59" text-anchor="middle" fill="#1e40af">System prompt</text>
+  <text x="368" y="59" text-anchor="middle" fill="#1e40af">AGENTS.md</text>
+  <text x="588" y="59" text-anchor="middle" fill="#92400e">User query A</text>
+
+  <!-- Request 2 bar background -->
+  <rect x="10" y="120" width="700" height="48" rx="8" fill="#f8fafc" stroke="#e4e4e7" stroke-width="1"/>
+
+  <!-- Request 2 segments -->
+  <rect x="10" y="120" width="260" height="48" rx="8" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <rect x="268" y="120" width="200" height="48" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <rect x="466" y="120" width="244" height="48" rx="8" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+
+  <text x="140" y="149" text-anchor="middle" fill="#1e40af">System prompt</text>
+  <text x="368" y="149" text-anchor="middle" fill="#1e40af">AGENTS.md</text>
+  <text x="588" y="149" text-anchor="middle" fill="#92400e">User query B</text>
+
+  <!-- Cache hit bracket -->
+  <rect x="10" y="190" width="460" height="4" rx="2" fill="#16a34a"/>
+  <line x1="10" y1="180" x2="10" y2="195" stroke="#16a34a" stroke-width="2"/>
+  <line x1="470" y1="180" x2="470" y2="195" stroke="#16a34a" stroke-width="2"/>
+
+  <text x="240" y="214" text-anchor="middle" class="hit-label">&#x2501;&#x2501;&#x2501;&#x2501;&#x2501; cache hit (shared prefix) &#x2501;&#x2501;&#x2501;&#x2501;&#x2501;</text>
+
+  <!-- Request labels -->
+  <text x="10" y="22" class="label">Request 1</text>
+  <text x="10" y="112" class="label">Request 2</text>
+
+  <!-- Legend -->
+  <rect x="10" y="235" width="12" height="12" rx="2" fill="#dbeafe" stroke="#93c5fd" stroke-width="1"/>
+  <text x="28" y="246" class="label">Cached (identical prefix)</text>
+  <rect x="180" y="235" width="12" height="12" rx="2" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+  <text x="198" y="246" class="label">Not cached (unique per request)</text>
+</svg>
