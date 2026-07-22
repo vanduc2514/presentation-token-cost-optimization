@@ -238,6 +238,8 @@ that exploration cost by providing the answers upfront.
 - Principle: **compute outside, surface only results**
 - Tools: context-mode, RTK, structured I/O pipelines
 
+<div class="impact-box"><strong>Impact:</strong> 90%+ reduction in context-window tokens for data-heavy tasks — 700KB log → 3KB summary</div>
+
 <!-- SPEAKER NOTES
 The core pattern: instead of reading a large file into context and then
 analyzing it, run the analysis in a sandbox and print only the answer.
@@ -258,6 +260,8 @@ the largest source of token waste.
 - **Token caps**: limit response length explicitly
 - Less verbosity = fewer output tokens
 
+<div class="impact-box"><strong>Impact:</strong> Cut output tokens by 50%+ without losing the signal — terse responses on every interaction</div>
+
 <!-- SPEAKER NOTES
 Models default to helpful, thorough explanations. A skill that says
 "respond in under 50 characters" or "output valid JSON only" cuts
@@ -276,6 +280,8 @@ output tokens significantly. Especially useful for automated pipelines.
 - **Implementation**: code generation -> medium model
 - **Review**: linting, validation -> small model
 - Each agent has its own system prompt and model selection
+
+<div class="impact-box"><strong>Impact:</strong> Pay only for the capability you need — Haiku for lint, Sonnet for features, Opus for architecture</div>
 
 <!-- SPEAKER NOTES
 Do not pay Opus prices for tasks Haiku handles well. Split your workflow:

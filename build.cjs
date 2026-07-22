@@ -207,6 +207,20 @@ const customCss = `
       border-radius: 0 12px 12px 0;
     }
 
+    .impact-box {
+      margin-top: 0.8rem;
+      padding: 0.6rem 1rem;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      font-size: clamp(0.75rem, 1.4vmin, 0.9rem);
+      color: #166534;
+      line-height: 1.4;
+    }
+    .impact-box strong {
+      font-weight: 600;
+    }
+
     .step table {
       width: 100%;
       margin-top: 1.6rem;
@@ -287,6 +301,7 @@ const customCss = `
         white-space: pre;
         word-break: normal;
       }
+      .impact-box { font-size: clamp(0.7rem, 1.3vmin, 0.9rem); padding: 0.5rem 0.8rem; }
     }
 
     /* ── TITLE SLIDE ───────────────────────────────────────────────────── */
