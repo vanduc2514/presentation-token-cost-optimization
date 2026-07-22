@@ -168,7 +168,7 @@ and to identify where cache is being invalidated unexpectedly.
 
 # Cache Pricing
 
-> AI Credits per 1M tokens. Cached input = 90% off.
+> AI Credits per 1M tokens. Output from Cache = 80% off. Some models are free.
 
 | Model | Non-Cache | Cache |
 |---|---|---|
@@ -182,8 +182,9 @@ and to identify where cache is being invalidated unexpectedly.
 <!-- SPEAKER NOTES
 Prices shown are per million tokens from GitHub Copilot's official
 pricing page (docs.github.com/copilot/reference/.../models-and-pricing).
-1 AI Credit = $0.01 USD. Cached input = 10% of fresh input price (~10x reduction).
-The output/input ratio is about 5-6x. Source: GitHub Copilot Models and Pricing.
+1 AI Credit = $0.01 USD. Output from Cache = 80% off.
+Some models (e.g. OpenAI) have free cache write; Anthropic models
+charge a cache write fee (~25% above input). Source: GitHub Copilot Models and Pricing.
 -->
 
 ------

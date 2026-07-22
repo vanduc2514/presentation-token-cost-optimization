@@ -167,7 +167,7 @@ vô hiệu hóa bất ngờ.
 
 # Chi Phí Cache
 
-> AI Credits trên 1M token. Cache input giảm 90%.
+> AI Credits trên 1M token. Output từ Cache giảm 80%. Một số model miễn phí.
 
 | Model | Non-Cache | Cache |
 |---|---|---|
@@ -181,9 +181,9 @@ vô hiệu hóa bất ngờ.
 <!-- SPEAKER NOTES
 Giá hiển thị là trên 1 triệu token từ trang pricing chính thức
 của GitHub Copilot (docs.github.com/copilot/reference/...).
-1 AI Credit = $0.01 USD. Cache input = 10% giá input thường (giảm ~10x).
-Tỷ lệ output/input khoảng 5-6 lần.
-Nguồn: GitHub Copilot Models and Pricing.
+1 AI Credit = $0.01 USD. Output từ Cache giảm 80%.
+Một số model (như OpenAI) miễn phí cache write; model Anthropic
+tính phí cache write (~25% cao hơn input). Nguồn: GitHub Copilot Models and Pricing.
 -->
 
 ------
