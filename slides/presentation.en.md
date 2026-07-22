@@ -238,7 +238,7 @@ that exploration cost by providing the answers upfront.
 - Principle: **compute outside, surface only results**
 - Tools: context-mode, RTK, structured I/O pipelines
 
-<div class="impact-box"><strong>Impact:</strong> 90%+ reduction in context-window tokens for data-heavy tasks - 700KB log to 3KB summary</div>
+<div class="impact-box"><strong>Impact:</strong> Heavy data processing stays outside the context window, only the result enters</div>
 
 <!-- SPEAKER NOTES
 The core pattern: instead of reading a large file into context and then
@@ -260,7 +260,7 @@ the largest source of token waste.
 - **Token caps**: limit response length explicitly
 - Less verbosity = fewer output tokens
 
-<div class="impact-box"><strong>Impact:</strong> Cut output tokens by 50%+ without losing the signal - terse responses on every interaction</div>
+<div class="impact-box"><strong>Impact:</strong> Output stays concise without losing substance on every interaction</div>
 
 <!-- SPEAKER NOTES
 Models default to helpful, thorough explanations. A skill that says
@@ -281,7 +281,7 @@ output tokens significantly. Especially useful for automated pipelines.
 - **Review**: linting, validation -> small model
 - Each agent has its own system prompt and model selection
 
-<div class="impact-box"><strong>Impact:</strong> Pay only for the capability you need - Haiku for lint, Sonnet for features, Opus for architecture</div>
+<div class="impact-box"><strong>Impact:</strong> Match model capability to task complexity, pay only for what you actually need</div>
 
 <!-- SPEAKER NOTES
 Do not pay Opus prices for tasks Haiku handles well. Split your workflow:
