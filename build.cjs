@@ -709,6 +709,18 @@ function buildPresentation(input, output, langSwitcher) {
     });
   });
 
+  /* Sandbox diagram image is inlined as base64 (class stripped by markpress) */
+  /* Target by data-y position since impress assigns step IDs at runtime */
+  var sandboxStep = document.querySelector('.step[data-y="-600"]');
+  if (sandboxStep) {
+    sandboxStep.querySelectorAll('img').forEach(function (img) {
+      img.addEventListener('click', function (e) {
+        e.stopPropagation();
+        openModal(img.src);
+      });
+    });
+  }
+
   modal.addEventListener('click', closeModal);
   closeBtn.addEventListener('click', function (e) {
     e.stopPropagation();
