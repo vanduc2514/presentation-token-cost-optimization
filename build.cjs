@@ -24,8 +24,8 @@ const markpress = require('markpress');
 const INPUT_EN = path.resolve(__dirname, 'slides/presentation.en.md');
 const INPUT_VI = path.resolve(__dirname, 'slides/presentation.vi.md');
 const OUTPUT_DIR = path.resolve(__dirname, 'output');
-const OUTPUT_VI = path.resolve(OUTPUT_DIR, 'index.html');
-const OUTPUT_EN = path.resolve(OUTPUT_DIR, 'index.en.html');
+const OUTPUT_VI = path.resolve(OUTPUT_DIR, 'index.vi.html');
+const OUTPUT_EN = path.resolve(OUTPUT_DIR, 'index.html');
 
 // ─────────────────────────────────────────────────────────────────────────────
 // GOOGLE TAG MANAGER (GA4)
@@ -516,7 +516,7 @@ const SVG_NEXT = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
 // LANGUAGE SWITCHER
 // ─────────────────────────────────────────────────────────────────────────────
 const langSwitcherEn = `
-  <a id="lang-switcher" href="./index.html" title="Switch to Ti\u1ebfng Vi\u1ec7t">\u{1F1FB}\u{1F1F3} Ti\u1ebfng Vi\u1ec7t</a>
+  <a id="lang-switcher" href="./index.vi.html" title="Switch to Ti\u1ebfng Vi\u1ec7t">\u{1F1FB}\u{1F1F3} Ti\u1ebfng Vi\u1ec7t</a>
   <style>
     #lang-switcher {
       position: fixed;
@@ -542,7 +542,7 @@ const langSwitcherEn = `
   </style>`;
 
 const langSwitcherVi = `
-  <a id="lang-switcher" href="./index.en.html" title="Switch to English">\u{1F1EC}\u{1F1E7} English</a>
+  <a id="lang-switcher" href="./index.html" title="Switch to English">\u{1F1EC}\u{1F1E7} English</a>
   <style>
     #lang-switcher {
       position: fixed;
