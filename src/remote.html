@@ -151,7 +151,7 @@
       <div id="next-slide-title">&mdash;</div>
     </div>
     <div id="nav-bar">
-      <button id="prev-btn" class="nav-btn" disabled><span>&#8592;</span><span class="nav-label">Prev</span></button>
+      <button id="prev-btn" class="nav-btn"><span>&#8592;</span><span class="nav-label">Prev</span></button>
       <button id="next-btn" class="nav-btn"><span class="nav-label">Next</span><span>&#8594;</span></button>
     </div>
     <div id="disconnected-banner" style="display:none">Disconnected &mdash; tap to reconnect</div>
@@ -207,6 +207,9 @@
       slideTitle.textContent    = data.title || '(no title)';
       nextSlideTitle.textContent = data.nextTitle || '(no title)';
       progressFill.style.width  = ((data.index / data.total) * 100) + '%';
+
+      prevBtn.disabled = data.index <= 1;
+      nextBtn.disabled  = data.index >= data.total;
 
       if (data.notes && data.notes.trim()) {
         var html = data.notes.split(/\n\n+/).map(function (para) {
