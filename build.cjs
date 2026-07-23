@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 // ─────────────────────────────────────────────────────────────────────────────
 // SYNTAX HIGHLIGHTING GUARD
@@ -398,6 +399,39 @@ const customCss = `
     .hljs-variable, .hljs-title { color: #e36209; }
     .hljs-punctuation { color: #586069; }
 
+    /* ── DOWNLOAD BUTTON ────────────────────────────────────────────────── */
+    .slide-download-link {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      z-index: 9999;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--line);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      color: var(--ink-dim);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    }
+    .slide-download-link:hover {
+      background: rgba(255, 255, 255, 0.98);
+      color: var(--ink);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+    .slide-download-link svg {
+      display: block;
+      width: 16px;
+      height: 16px;
+    }
+
     /* ── GITHUB BADGE ───────────────────────────────────────────────────── */
     .gh-badge {
       position: fixed;
@@ -513,6 +547,15 @@ const SVG_PREV = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
 const SVG_NEXT = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>';
 
 // ─────────────────────────────────────────────────────────────────────────────
+// PDF DOWNLOAD CONFIG
+// ─────────────────────────────────────────────────────────────────────────────
+const GIT_HASH = process.env.BUILD_GIT_SHA
+  ? process.env.BUILD_GIT_SHA.toString().trim().slice(0, 7)
+  : '';
+
+const SVG_DOWNLOAD = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>';
+
+// ─────────────────────────────────────────────────────────────────────────────
 // LANGUAGE SWITCHER
 // ─────────────────────────────────────────────────────────────────────────────
 const langSwitcherEn = `
@@ -594,7 +637,8 @@ function applyHighlighting(html) {
 // ─────────────────────────────────────────────────────────────────────────────
 // BUILD FUNCTION
 // ─────────────────────────────────────────────────────────────────────────────
-function buildPresentation(input, output, langSwitcher) {
+function buildPresentation(input, output, langSwitcher, pdfSuffix) {
+  const pdfFilename = `presentation-token-cost-optimization${pdfSuffix ? '-' + pdfSuffix : ''}${GIT_HASH ? '-' + GIT_HASH : ''}.pdf`;
   return markpress(input, { theme: false }).then(({ html }) => {
     let stripped = html
       .replace(/<link[^>]+markpress[^>]*>/gi, '')
@@ -626,6 +670,16 @@ function buildPresentation(input, output, langSwitcher) {
     + '<button class="slide-nav-btn" id="nav-next" type="button" title="Next slide">'
     + 'Next${SVG_NEXT}</button>';
   document.body.appendChild(nav);
+
+  // Download PDF button
+  var downloadLink = document.createElement('a');
+  downloadLink.className = 'slide-download-link';
+  downloadLink.href = './${pdfFilename}';
+  downloadLink.download = '${pdfFilename}';
+  downloadLink.title = 'Download presentation as PDF';
+  downloadLink.setAttribute('aria-label', 'Download PDF');
+  downloadLink.innerHTML = '${SVG_DOWNLOAD}';
+  document.body.appendChild(downloadLink);
 
   var api = window.impress();
 
@@ -762,6 +816,19 @@ function buildPresentation(input, output, langSwitcher) {
 
     fs.writeFileSync(output, finalHtml, 'utf8');
     console.log(`Built: ${output}`);
+
+    // ── Generate PDF ──────────────────────────────────────────────────────────
+    const htmlFilename = path.basename(output);
+    console.log(`Generating PDF: ${pdfFilename}…`);
+    try {
+      execFileSync('node', [path.join(__dirname, 'scripts', 'generate-pdf.cjs'), htmlFilename, pdfFilename], {
+        stdio: 'inherit',
+        cwd: __dirname,
+      });
+      console.log('PDF build complete:', pdfFilename);
+    } catch (pdfErr) {
+      console.warn('PDF generation skipped (Playwright not available):', pdfErr.message);
+    }
   });
 }
 
@@ -773,8 +840,8 @@ fs.writeFileSync(path.join(OUTPUT_DIR, 'remote.html'), REMOTE_HTML, 'utf8');
 console.log(`Built: ${path.join(OUTPUT_DIR, 'remote.html')}`);
 
 Promise.all([
-  buildPresentation(INPUT_EN, OUTPUT_EN, langSwitcherEn),
-  buildPresentation(INPUT_VI, OUTPUT_VI, langSwitcherVi),
+  buildPresentation(INPUT_EN, OUTPUT_EN, langSwitcherEn, 'en'),
+  buildPresentation(INPUT_VI, OUTPUT_VI, langSwitcherVi, 'vi'),
 ]).catch(err => {
   console.error('Build failed:', err);
   process.exit(1);
