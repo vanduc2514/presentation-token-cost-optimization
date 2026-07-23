@@ -157,23 +157,28 @@
         }
 
         if (data.type === 'cmd') {
-          var api = window.impress && window.impress();
-          if (!api) return;
-          var steps = Array.from(document.querySelectorAll('.step'));
-          var active = document.querySelector('.step.active');
-          var idx = steps.indexOf(active);
-          if (data.cmd === 'next' && idx >= 0 && idx < steps.length - 1) {
-            api.goto(steps[idx + 1].id);
-          }
-          else if (data.cmd === 'prev' && idx > 0) {
-            api.goto(steps[idx - 1].id);
-          }
-          else if (data.cmd === 'goto' && data.step) {
-            api.goto(data.step);
-          }          // Broadcast the slide state explicitly after programmatic navigation,
-          // because impress:stepenter may not fire reliably when goto() is
-          // called from within an SSE onmessage callback.
-          broadcastSlide();        }
+          // Defer to next tick so impress.js can process the goto() outside
+          // the SSE onmessage callback context, where requestAnimationFrame
+          // and internal state transitions work reliably.
+          setTimeout(function () {
+            var api = window.impress && window.impress();
+            if (!api) return;
+            var steps = Array.from(document.querySelectorAll('.step'));
+            var active = document.querySelector('.step.active');
+            var idx = steps.indexOf(active);
+            if (data.cmd === 'next' && idx >= 0 && idx < steps.length - 1) {
+              api.goto(steps[idx + 1].id);
+            }
+            else if (data.cmd === 'prev' && idx > 0) {
+              api.goto(steps[idx - 1].id);
+            }
+            else if (data.cmd === 'goto' && data.step) {
+              api.goto(data.step);
+            }
+            // Broadcast the slide state after a brief delay so impress.js
+            // has time to settle the active class and fire events.
+            setTimeout(broadcastSlide, 100);
+          }, 0);
       };
 
       document.getElementById('rc-setup-panel').style.display = 'none';
