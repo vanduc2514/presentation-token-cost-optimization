@@ -170,8 +170,10 @@
           }
           else if (data.cmd === 'goto' && data.step) {
             api.goto(data.step);
-          }
-        }
+          }          // Broadcast the slide state explicitly after programmatic navigation,
+          // because impress:stepenter may not fire reliably when goto() is
+          // called from within an SSE onmessage callback.
+          broadcastSlide();        }
       };
 
       document.getElementById('rc-setup-panel').style.display = 'none';
